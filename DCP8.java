@@ -19,6 +19,9 @@
 
 //PostOrder
 
+/**
+ * Binary Tree Node Class
+ */
 class Node{
 	int value;
 	Node left;
@@ -37,6 +40,9 @@ class Node{
 	}
 }
 
+/**
+ * Counter class
+ */
 class Counter{
 	int counter;
 
@@ -56,9 +62,15 @@ class Counter{
 		return this.counter;
 	}
 }
+
 public class DCP8{
 
-	public static String recurseNumUnival(Node node, Counter counter){
+	/**
+	 * Private method to recursively find number of unival trees under the node.
+	 * @param node tree node
+	 * @param counter counting number of unival trees
+	 */
+	private static String recurseNumUnival(Node node, Counter counter){
 		if(node == null){
 			return "";
 		}
@@ -73,6 +85,10 @@ public class DCP8{
 
 	}
 
+	/**
+	 * Public method to recursively find number of unival trees under the node.
+	 * @param head head of tree node
+	 */
 	public static int numUnival(Node head){
 		Counter counter = new Counter();
 		recurseNumUnival(head, counter);
